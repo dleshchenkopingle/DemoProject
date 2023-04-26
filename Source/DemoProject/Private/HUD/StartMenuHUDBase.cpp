@@ -13,6 +13,14 @@ void AStartMenuHUDBase::AddAchievementsWidget()
 	}
 }
 
+void AStartMenuHUDBase::AddSaveSlotsWidget()
+{
+	if (SaveSlotsWidgetClass && BaseWidget)
+	{
+		BaseWidget->PushCommonActivatableWidget(SaveSlotsWidgetClass);
+	}
+}
+
 void AStartMenuHUDBase::BeginPlay()
 {
 	Super::BeginPlay();

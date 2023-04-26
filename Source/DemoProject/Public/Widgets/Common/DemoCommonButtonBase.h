@@ -16,10 +16,4 @@ class DEMOPROJECT_API UDemoCommonButtonBase : public UCommonButtonBase
 
 protected:
 	virtual void NativePreConstruct() override;
-
-	UFUNCTION(BlueprintImplementableEvent)
-	void RefreshButtonText(const FText& InText);
-	
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Button")
-	FText ButtonText;
 };

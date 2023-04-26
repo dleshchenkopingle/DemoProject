@@ -21,6 +21,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void AddAchievementsWidget();
 
+	UFUNCTION(BlueprintCallable)
+	void AddSaveSlotsWidget();
+
 protected:
 	virtual void BeginPlay() override;
 
@@ -39,4 +42,7 @@ private:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Classes")
 	TSubclassOf<UCommonActivatableMenuWidgetBase> AchievementsWidgetClass;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Classes")
+	TSubclassOf<UCommonActivatableMenuWidgetBase> SaveSlotsWidgetClass;
 };

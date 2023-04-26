@@ -6,6 +6,4 @@
 void UDemoCommonButtonBase::NativePreConstruct()
 {
 	Super::NativePreConstruct();
-
-	RefreshButtonText(ButtonText);
 }
