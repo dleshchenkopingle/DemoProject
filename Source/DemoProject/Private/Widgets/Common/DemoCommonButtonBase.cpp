@@ -3,7 +3,7 @@
 
 #include "Widgets/Common/DemoCommonButtonBase.h"
 
-void UDemoCommonButtonBase::NativePreConstruct()
+void UDemoCommonButtonBase::SetIsClicked_Implementation(bool newIsClicked)
 {
-	Super::NativePreConstruct();
+	bIsClicked = newIsClicked; 
 }

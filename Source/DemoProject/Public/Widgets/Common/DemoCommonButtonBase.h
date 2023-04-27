@@ -14,6 +14,13 @@ class DEMOPROJECT_API UDemoCommonButtonBase : public UCommonButtonBase
 {
 	GENERATED_BODY()
 
+public:
+	UFUNCTION(BlueprintPure)
+	bool GetIsClicked() const { return bIsClicked; }
+
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+	void SetIsClicked(bool newIsClicked);
+
 protected:
-	virtual void NativePreConstruct() override;
+	bool bIsClicked;
 };
