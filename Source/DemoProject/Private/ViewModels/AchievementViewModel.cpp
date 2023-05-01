@@ -23,9 +23,9 @@ void UAchievementViewModel::SetAchievementIcon(TSoftObjectPtr<UTexture2D> newAch
     UE_MVVM_BROADCAST_FIELD_VALUE_CHANGED(UpdateAchievementIcon);
 }
 
-void UAchievementViewModel::SetbIsHidden(bool newBIsHidden)
+void UAchievementViewModel::SetbIsHidden(bool newbIsHidden)
 {
-    UE_MVVM_SET_PROPERTY_VALUE(bIsHidden, newBIsHidden);
+    UE_MVVM_SET_PROPERTY_VALUE(bIsHidden, newbIsHidden);
     UE_MVVM_BROADCAST_FIELD_VALUE_CHANGED(UpdateAchievementTitle);
     UE_MVVM_BROADCAST_FIELD_VALUE_CHANGED(UpdateAchievementTitleVisibility);
     UE_MVVM_BROADCAST_FIELD_VALUE_CHANGED(UpdateHiddenAchievementTitleVisibility);

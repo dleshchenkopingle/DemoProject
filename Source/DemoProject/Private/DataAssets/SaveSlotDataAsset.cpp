@@ -33,3 +33,13 @@ FString USaveSlotDataAsset::GetCreationTime() const
 	FString TimeString = HourString + ":" + MinuteString + ":" + SecondString;
 	return TimeString;
 }
+
+//TArray<TSoftObjectPtr<UInventoryItemDataAsset>> USaveSlotDataAsset::GetInventoryItems() const
+//{ 
+//	return InventoryItems; 
+//}
+//
+//TArray<TSoftObjectPtr<UResourceDataAsset>> USaveSlotDataAsset::GetResourceItems() const
+//{ 
+//	return ResourceItems; 
+//}

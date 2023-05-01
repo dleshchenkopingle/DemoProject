@@ -18,7 +18,7 @@ private:
     void SetAchievementTitle(const FString& newAchievementTitle);
     void SetAchievementDescription(const FString& newAchievementDescription);
     void SetAchievementIcon(TSoftObjectPtr<UTexture2D> newAchievementIcon);
-    void SetbIsHidden(bool newBIsHidden);
+    void SetbIsHidden(bool newbIsHidden);
 
 public:
     UFUNCTION(BlueprintPure, FieldNotify)

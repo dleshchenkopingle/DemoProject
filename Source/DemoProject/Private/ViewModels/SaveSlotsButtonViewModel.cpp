@@ -18,7 +18,7 @@ void USaveSlotsButtonViewModel::SetSaveSlotDate(const FString& newSaveSlotDate)
 
 void USaveSlotsButtonViewModel::SetSaveSlotTime(const FString& newSaveSlotTime)
 {
-    UE_MVVM_SET_PROPERTY_VALUE(SaveSlotDate, newSaveSlotTime);
+    UE_MVVM_SET_PROPERTY_VALUE(SaveSlotTime, newSaveSlotTime);
     UE_MVVM_BROADCAST_FIELD_VALUE_CHANGED(UpdateSaveSlotTime);
 }
 

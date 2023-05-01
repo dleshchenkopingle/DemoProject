@@ -7,6 +7,9 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "SaveSlotDataAsset.generated.h"
 
+class UInventoryItemDataAsset;
+class UResourceDataAsset;
+
 /**
  * 
  */
@@ -24,6 +27,21 @@ public:
 
 	UFUNCTION(BlueprintPure, Category = "Save Slot")
 	FText GetSaveSlotName() const { return SaveSlotName; }
+
+	UFUNCTION(BlueprintPure, Category = "Save Slot")
+	FText GetCurrentFloor() const { return CurrentFloor; }
+
+	UFUNCTION(BlueprintPure, Category = "Save Slot")
+	FText GetAvailableFloors() const { return AvailableFloors; }
+
+	UFUNCTION(BlueprintPure, Category = "Save Slot")
+	FText GetLivesLeft() const { return LivesLeft; }
+
+	UFUNCTION(BlueprintPure, Category = "Save Slot")
+	TArray<TSoftObjectPtr<UInventoryItemDataAsset>> GetInventoryItems() const { return InventoryItems; }
+
+	UFUNCTION(BlueprintPure, Category = "Save Slot")
+	TArray<TSoftObjectPtr<UResourceDataAsset>> GetResourceItems() const { return ResourceItems; }
 
 	UFUNCTION(BlueprintPure, Category = "Save Slot")
 	bool GetIsInitialized() const { return bIsInitialized; };
@@ -45,10 +63,10 @@ protected:
 	FText LivesLeft;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Save Slot")
-	TArray<TSoftObjectPtr<class UInventoryItemDataAsset>> InventoryItems;
+	TArray<TSoftObjectPtr<UInventoryItemDataAsset>> InventoryItems;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Save Slot")
-	TArray<TSoftObjectPtr<class UResourceDataAsset>> ResourceItems;
+	TArray<TSoftObjectPtr<UResourceDataAsset>> ResourceItems;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Save Slot")
 	bool bIsInitialized;
