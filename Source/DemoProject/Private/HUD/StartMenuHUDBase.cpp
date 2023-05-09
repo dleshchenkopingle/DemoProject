@@ -4,6 +4,7 @@
 #include "HUD/StartMenuHUDBase.h"
 #include "Widgets/Common/CommonActivatableMenuWidgetBase.h"
 #include "Widgets/Common/CommonUserWidgetBase.h"
+#include "Widgets/Common/CommonActivatablePromptWidget.h"
 
 void AStartMenuHUDBase::AddAchievementsWidget()
 {
@@ -19,6 +20,16 @@ void AStartMenuHUDBase::AddSaveSlotsWidget()
 	{
 		BaseWidget->PushCommonActivatableWidget(SaveSlotsWidgetClass);
 	}
+}
+
+UCommonActivatablePromptWidget* AStartMenuHUDBase::AddPromptWidget(const FText& Title, const FText& Description)
+{
+	if (PromptWidgetClass && BaseWidget)
+	{
+		return BaseWidget->PushCommonActivatablePromptWidget(PromptWidgetClass, Title, Description);
+	}
+
+	return nullptr;
 }
 
 void AStartMenuHUDBase::BeginPlay()

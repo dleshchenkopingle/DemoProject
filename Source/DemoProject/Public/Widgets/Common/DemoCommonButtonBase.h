@@ -15,6 +15,9 @@ class DEMOPROJECT_API UDemoCommonButtonBase : public UCommonButtonBase
 	GENERATED_BODY()
 
 public:
+	UFUNCTION(BlueprintCallable)
+	void SetButtonText(FText InButtonText);
+
 	UFUNCTION(BlueprintPure)
 	bool GetIsClicked() const { return bIsClicked; }
 
@@ -22,5 +25,14 @@ public:
 	void SetIsClicked(bool newIsClicked);
 
 protected:
+	virtual void NativePreConstruct() override;
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void RefreshButtonText(const FText& InTitle);
+
+protected:
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Button")
+	FText ButtonText;
+
 	bool bIsClicked;
 };

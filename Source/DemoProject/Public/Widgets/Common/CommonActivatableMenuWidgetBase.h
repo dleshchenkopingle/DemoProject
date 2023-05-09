@@ -13,7 +13,4 @@ UCLASS()
 class DEMOPROJECT_API UCommonActivatableMenuWidgetBase : public UCommonActivatableWidget
 {
 	GENERATED_BODY()
-	
-public:
-
 };

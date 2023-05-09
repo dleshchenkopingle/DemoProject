@@ -16,5 +16,8 @@ class DEMOPROJECT_API UCommonUserWidgetBase : public UCommonUserWidget
 	
 public:
 	UFUNCTION(BlueprintImplementableEvent)
-	void PushCommonActivatableWidget(TSubclassOf<class UCommonActivatableWidget> CommonActivatableWidgetClass);
+	void PushCommonActivatableWidget(TSubclassOf<class UCommonActivatableWidget> WidgetClass);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	class UCommonActivatablePromptWidget* PushCommonActivatablePromptWidget(TSubclassOf<class UCommonActivatablePromptWidget> PromptWidgetClass, const FText& Title, const FText& Description);
 };

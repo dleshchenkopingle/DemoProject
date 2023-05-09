@@ -3,15 +3,12 @@
 
 #include "Widgets/Common/CommonActivatablePromptWidget.h"
 
-void UCommonActivatablePromptWidget::SetPromptText(const FText& InText)
+void UCommonActivatablePromptWidget::SetPromptTitle(const FText& InTitle)
 {
-	PromptText = InText;
-	RefreshPromptText(PromptText);
+	RefreshPromptTitle(InTitle);
 }
 
-void UCommonActivatablePromptWidget::NativePreConstruct()
+void UCommonActivatablePromptWidget::SetPromptDescription(const FText& InDescription)
 {
-	Super::NativePreConstruct();
-
-	RefreshPromptText(PromptText);
+	RefreshPromptDescription(InDescription);
 }

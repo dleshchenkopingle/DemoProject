@@ -8,6 +8,7 @@
 
 class UCommonUserWidgetBase;
 class UCommonActivatableMenuWidgetBase;
+class UCommonActivatablePromptWidget;
 
 /**
  * 
@@ -23,6 +24,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void AddSaveSlotsWidget();
+
+	UFUNCTION(BlueprintCallable)
+	UCommonActivatablePromptWidget* AddPromptWidget(const FText& Title, const FText& Description);
 
 protected:
 	virtual void BeginPlay() override;
@@ -45,4 +49,7 @@ private:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Classes")
 	TSubclassOf<UCommonActivatableMenuWidgetBase> SaveSlotsWidgetClass;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Classes")
+	TSubclassOf<UCommonActivatablePromptWidget> PromptWidgetClass;
 };

@@ -16,15 +16,15 @@ class DEMOPROJECT_API UCommonActivatablePromptWidget : public UCommonActivatable
 	
 public:
 	UFUNCTION(BlueprintCallable)
-	void SetPromptText(const FText& InText);
+	void SetPromptTitle(const FText& InTitle);
+
+	UFUNCTION(BlueprintCallable)
+	void SetPromptDescription(const FText& InDescription);
 
 protected:
-	virtual void NativePreConstruct() override;
+	UFUNCTION(BlueprintImplementableEvent)
+	void RefreshPromptTitle(const FText& InTitle);
 
 	UFUNCTION(BlueprintImplementableEvent)
-	void RefreshPromptText(const FText& InText);
-
-protected:
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Prompt")
-	FText PromptText;
+	void RefreshPromptDescription(const FText& InDescription);
 };

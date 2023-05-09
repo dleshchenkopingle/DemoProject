@@ -54,6 +54,6 @@ FSlateBrush USaveSlotItemViewModel::UpdateItemIcon() const
 
 FText USaveSlotItemViewModel::UpdateItemAmount() const
 {
-    FString ItemAmountString = "x" + FString::FromInt(ItemAmount);
+    FString ItemAmountString = FString::Printf(TEXT("x%i"), ItemAmount);
     return FText::FromString(ItemAmountString);
 }
